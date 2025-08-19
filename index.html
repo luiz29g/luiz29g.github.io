@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lu e Giih — Nossa História</title>
+  <meta name="description" content="Página de homenagem de namoro." />
+  <meta name="theme-color" content="#ff4d6d" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff7fb;
+      color: #2a2a2a;
+      text-align: center;
+    }
+    header {
+      background: #ff4d6d;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      max-width: 600px;
+    }
+    h2 {
+      color: #ff4d6d;
+    }
+    .timeline {
+      text-align: left;
+      margin-top: 20px;
+    }
+    .event {
+      margin-bottom: 24px;
+      padding-left: 10px;
+      border-left: 3px solid #ff4d6d;
+    }
+    .event h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #ff4d6d;
+    }
+    .event p {
+      margin: 4px 0 10px;
+      font-size: 14px;
+      color: #444;
+    }
+    .event img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    #music-control {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #music-control:hover {
+      background: #e63b5b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    ❤ Lu e Giih ❤
+  </header>
+
+  <!-- Música de fundo -->
+  <audio id="bg-music" autoplay loop>
+    <!-- Coloque o arquivo da música na pasta media e renomeie como followyou.mp3 -->
+    <source src="media/followyou.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <button id="music-control">⏸ Pausar música</button>
+
+  <section>
+    <h2>Nossa História</h2>
+    <div class="timeline">
+      <div class="event">
+        <h3>Nossa primeira conversa</h3>
+        <p>Aquele momento especial em que tudo começou...</p>
+        <img src="img/conversa.jpg" alt="Nossa primeira conversa">
+      </div>
+      <div class="event">
+        <h3>O primeiro "Eu te amo"</h3>
+        <p>As palavras que mudaram tudo para sempre.</p>
+        <img src="img/euteamo.jpg" alt="Primeiro Eu te amo">
+      </div>
+      <div class="event">
+        <h3>O dia do primeiro beijo</h3>
+        <p>Um instante inesquecível cheio de emoção.</p>
+        <img src="img/beijo.jpg" alt="Primeiro beijo">
+      </div>
+      <div class="event">
+        <h3>O pedido de namoro</h3>
+        <p>Um "sim" que fez nascer nossa linda história.</p>
+        <img src="img/namoro.jpg" alt="Pedido de namoro">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const controlBtn = document.getElementById('music-control');
+
+    controlBtn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        controlBtn.textContent = '⏸ Pausar música';
+      } else {
+        music.pause();
+        controlBtn.textContent = '▶️ Tocar música';
+      }
+    });
+  </script>
+</body>
+</html>
